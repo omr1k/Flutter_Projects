@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "461415748349",
+    "project_id": "omar-messages-flutter-app",
+    "storage_bucket": "omar-messages-flutter-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461415748349:android:1c27e97227fcea8a08e494",
+        "android_client_info": {
+          "package_name": "tk.omarkhattab.messaging_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461415748349-pjfv37kp1q8sa4s84h860obgvve6dsph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9ocF4n9upjZXwFlxbnXaPbUcT53oqfn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461415748349-pjfv37kp1q8sa4s84h860obgvve6dsph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,7 +11,7 @@ class FiveDaysData {
 }
 
 class Data {
-  final num temperature;
+  num temperature;
   final String dateTime;
 
   Data({required this.temperature, required this.dateTime});

@@ -6,6 +6,7 @@ import '../Constants/api.dart';
 import '../models/weather_response.dart';
 
 class NetworkManger {
+  
   static Future<WeatherResponse> getWeatherData(Position position) async {
     var lat = position.latitude.toString();
     var lon = position.longitude.toString();

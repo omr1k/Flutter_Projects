@@ -8,6 +8,7 @@ import 'package:weather_app/services/network_manger.dart';
 class WeatherProvider extends ChangeNotifier {
   List<WeatherResponse> weatherData = [];
   List<FiveDaysData> fiveDaysData = [];
+
   var isError = false;
   var isLoading = false;
 

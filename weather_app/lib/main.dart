@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/models/weatherProvider.dart';
 import 'package:weather_app/screens/home_screen.dart';
 import 'package:provider/provider.dart';
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 void main() {
   runApp(AppWidget());

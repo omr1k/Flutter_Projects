@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:weather_app/Constants/app_colors.dart';
@@ -241,13 +242,13 @@ class HomeScreenBody extends StatelessWidget {
               ),
             ),
           ),
-          AppChart(),
+          AppChart(whichChart: "Real",),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Forecast Previous 5 Days',
+                'Humidity',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 15,
@@ -255,7 +256,7 @@ class HomeScreenBody extends StatelessWidget {
               ),
             ),
           ),
-          AppChart(),
+          AppChart(whichChart: "nnn",),
         ],
       ),
     );
@@ -289,7 +290,7 @@ class HomeScreenHeader extends StatelessWidget {
                       Provider.of<WeatherProvider>(context, listen: false)
                           .askLocationPermission();
                     },
-                    icon: Icon(Icons.location_on),
+                    icon: Icon(FontAwesomeIcons.locationArrow),
                     color: AppColors.textColor,
                     iconSize: 30,
                   )

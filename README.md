@@ -1,4 +1,4 @@
-# Flutter_Projects
+# Flutter Projects
 
 # Weather App
 In this app I Implemented, Provider, Fetching User Location, Networking, SpinKit, Alert dilog, Permission Handler, [Check project files here](https://github.com/omr1k/Flutter_Projects/tree/main/weather_app)

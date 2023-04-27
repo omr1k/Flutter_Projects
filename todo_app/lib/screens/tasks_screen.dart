@@ -155,7 +155,7 @@ class _TasksScreenState extends State<TasksScreen> {
                     child: Provider.of<TaskData>(context).tasks.length != 0
                         ? TasksList()
                         : Center(
-                            child: Text("No Data"),
+                            child: Text("No Tasks to show"),
                           ), //TasksList(),
                   ),
                 ),

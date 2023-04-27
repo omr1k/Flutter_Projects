@@ -1,6 +1,6 @@
 # Flutter_Projects
 
-# To Do App
+# Weather App
 In this app I Implemented, Provider, Fetching User Location, Networking, SpinKit, Alert dilog, Permission Handler, [Check project files here](https://github.com/omr1k/Flutter_Projects/tree/main/weather_app)
 <div align="center">
 <img src="xX-Materials-Xx/readmeScreenShots/wa1.png" height="400" width=auto alt="iPhone"/>

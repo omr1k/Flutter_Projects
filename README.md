@@ -14,3 +14,21 @@ In this app I Implemented, Provider, Hive DB, ModalBottomSheet, Alert dilog, [Ch
 <img src="xX-Materials-Xx/readmeScreenShots/td2.png" height="400" width=auto alt="iPhone"/>
 </div>
 
+# Simple Travelling Guide App
+Simple Travelling Guide App with mock data, [Check project files here](https://github.com/omr1k/Flutter_Projects/tree/main/travel_app)
+<div align="center">
+<img src="xX-Materials-Xx/readmeScreenShots/ta1.png" height="400" width=auto alt="iPhone"/>
+<img src="xX-Materials-Xx/readmeScreenShots/ta2.png" height="400" width=auto alt="iPhone"/>
+<img src="xX-Materials-Xx/readmeScreenShots/ta3.png" height="400" width=auto alt="iPhone"/>
+<img src="xX-Materials-Xx/readmeScreenShots/ta4.png" height="400" width=auto alt="iPhone"/>
+<img src="xX-Materials-Xx/readmeScreenShots/ta5.png" height="400" width=auto alt="iPhone"/>
+<img src="xX-Materials-Xx/readmeScreenShots/ta6.png" height="400" width=auto alt="iPhone"/>
+</div>
+
+
+# Simple Store App
+Simple Store App with mock data, [Check project files here](https://github.com/omr1k/Flutter_Projects/tree/main/simple_store_app)
+<div align="center">
+<img src="xX-Materials-Xx/readmeScreenShots/store1.png" height="400" width=auto alt="iPhone"/>
+<img src="xX-Materials-Xx/readmeScreenShots/store2.png" height="400" width=auto alt="iPhone"/>
+</div>

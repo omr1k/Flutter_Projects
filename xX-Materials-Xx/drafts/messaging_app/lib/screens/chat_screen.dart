@@ -86,9 +86,11 @@ class _ChatScreenState extends State<ChatScreen> {
                   children: [
                     Expanded(
                       child: TextField(
+                        
                         controller: messageTextController,
                         onChanged: (value) => {messageText = value},
                         decoration: InputDecoration(
+                        
                           contentPadding: EdgeInsets.symmetric(
                             vertical: 10,
                             horizontal: 10,
@@ -96,6 +98,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           hintText: 'Write Your Meassage Here...',
                           border: InputBorder.none,
                         ),
+                        
                       ),
                     ),
                     TextButton(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:simple_store_app/constants.dart';
 import 'package:simple_store_app/widgets/home/home_body.dart';
 
 class HomeScreen extends StatelessWidget {

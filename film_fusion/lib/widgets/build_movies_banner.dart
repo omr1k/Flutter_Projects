@@ -9,6 +9,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:film_fusion/models/movie.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constants/api_constants.dart';
 import '../constants/app_colors.dart';
 import '../core/movie_notifier.dart';
@@ -194,13 +195,95 @@ class _BuildMoviesBannerState extends State<BuildMoviesBanner> {
               ),
             ),
             Positioned(
-                top: MediaQuery.of(context).size.height * 0.04,
-                child: RefreshButton(
-                  onPressed: () {
-                    Provider.of<MovieNotifier>(context, listen: false)
-                        .updateAllMovies();
-                  },
-                )),
+              top: MediaQuery.of(context).size.height * 0.04,
+              child: Row(
+                children: [
+                  RefreshButton(
+                    onPressed: () {
+                      Provider.of<MovieNotifier>(context, listen: false)
+                          .updateAllMovies();
+                    },
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width / 1.6,
+                  ),
+                  Container(
+                    height: 70,
+                    width: 70,
+                    child: IconButton(
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              content: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Text(
+                                    'This App Powered by Flutter',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15.0,
+                                    ),
+                                  ),
+                                  SizedBox(height: 10.0),
+                                  Container(
+                                    height: 80.0,
+                                    width: 80.0,
+                                    child: Image.network(
+                                      'https://logowik.com/content/uploads/images/flutter5786.jpg',
+                                    ),
+                                  ),
+                                  SizedBox(height: 10.0),
+                                  TextButton(
+                                    onPressed: () {
+                                      launchUrl(
+                                        Uri.parse(
+                                            "https://github.com/omr1k/Flutter_Projects/tree/main/film_fusion"),
+                                      );
+                                    },
+                                    child: Text(
+                                      'Check App on Github',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  Text(
+                                    "By Omar Khattab",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ),
+                              actions: <Widget>[
+                                Center(
+                                  child: TextButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text(
+                                      'OK',
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                      icon: Icon(
+                        Icons.info,
+                        color: AppColors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Positioned(
               bottom: 25,
               left: 0,

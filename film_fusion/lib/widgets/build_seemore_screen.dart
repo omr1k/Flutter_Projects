@@ -59,6 +59,7 @@ class seeMoreBody extends StatelessWidget {
                     style: TextStyle(
                       color: AppColors.lightGreen,
                       fontSize: 25,
+                      fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(
                           color: Colors.black.withOpacity(0.5),

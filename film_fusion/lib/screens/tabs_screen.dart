@@ -4,6 +4,8 @@ import 'package:film_fusion/screens/more_screen.dart';
 import 'package:film_fusion/screens/vod_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'dart:io';
+
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -21,6 +23,7 @@ class _TabsScreenState extends State<TabsScreen> {
   ];
   @override
   Widget build(BuildContext context) {
+    double buttomPadding = Platform.isIOS ? 20 : 10 ;
     return Scaffold(
       backgroundColor: AppColors.darkBlue,
       extendBody: true,
@@ -34,7 +37,7 @@ class _TabsScreenState extends State<TabsScreen> {
           margin: EdgeInsets.only(bottom: 0),
           child: Padding(
             padding:
-                const EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                 EdgeInsets.only(left: 5, right: 5, top: 10, bottom: buttomPadding ),
             child: GNav(
               rippleColor: AppColors.darkBlue,
               hoverColor: AppColors.white,

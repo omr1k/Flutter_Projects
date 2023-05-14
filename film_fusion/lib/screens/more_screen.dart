@@ -30,6 +30,7 @@ class MoreScreen extends StatelessWidget {
                       "More For You 😊",
                       style: TextStyle(
                         color: AppColors.lightGreen,
+                        fontWeight: FontWeight.bold,
                         fontSize: 25,
                         shadows: [
                           Shadow(

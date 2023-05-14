@@ -66,6 +66,8 @@ class BuildMovieScreen extends StatelessWidget {
               },
             ),
           ),
+
+          
           Positioned(
             top: MediaQuery.of(context).size.height / 2.2,
             left: 0,

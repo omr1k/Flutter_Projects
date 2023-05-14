@@ -59,6 +59,7 @@ class favScreenBody extends StatelessWidget {
                     style: TextStyle(
                       color: AppColors.lightGreen,
                       fontSize: screenSize.width * 0.12,
+                    fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(
                           color: Colors.black.withOpacity(0.5),

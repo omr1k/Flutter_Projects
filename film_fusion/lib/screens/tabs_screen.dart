@@ -1,5 +1,6 @@
 import 'package:film_fusion/constants/app_colors.dart';
 import 'package:film_fusion/screens/favorites_screen.dart';
+import 'package:film_fusion/screens/more_screen.dart';
 import 'package:film_fusion/screens/vod_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -16,11 +17,7 @@ class _TabsScreenState extends State<TabsScreen> {
   final pages = [
     VodScreen(),
     FavoritesScreen(),
-        Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: Colors.yellow,
-        child: Center(child: Text('2fsdfsd'))),
+    MoreScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -58,10 +55,9 @@ class _TabsScreenState extends State<TabsScreen> {
                   text: 'Favorites',
                 ),
                 GButton(
-                  icon: Icons.search,
+                  icon: Icons.info,
                   text: 'More',
                 ),
-                
               ],
               selectedIndex: _selectedIndex,
               onTabChange: (index) {

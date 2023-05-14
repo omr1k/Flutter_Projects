@@ -57,11 +57,13 @@ class _VodScreenState extends State<VodScreen> {
                   child: Column(
                     children: [
                       SizedBox(height: 10),
-                      trendingNowWidget(data: data),
+                      trendingNowWidget(movies: data.trendingNowMovies),
                       SizedBox(
-                          width: MediaQuery.of(context).size.width / 1.18,
-                          child: Divider(
-                              color: AppColors.lightGreen.withOpacity(0.2))),
+                        width: MediaQuery.of(context).size.width / 1.18,
+                        child: Divider(
+                          color: AppColors.lightGreen.withOpacity(0.2),
+                        ),
+                      ),
                       discoverGridView(movies: data.dicoverMovies)
                     ],
                   ),
@@ -74,6 +76,3 @@ class _VodScreenState extends State<VodScreen> {
     );
   }
 }
-
-
-

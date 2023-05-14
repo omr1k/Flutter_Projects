@@ -43,6 +43,8 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   youtube_player_flutter: ^8.1.2
   google_nav_bar: ^5.0.6
+  webview_flutter: ^4.2.0
+  flutter_inappwebview: ^5.7.2+3
   
   
 
@@ -89,6 +91,11 @@ flutter:
         - asset: assets/fonts/Poppins-Regular.ttf
         - asset: assets/fonts/Poppins-Medium.ttf
         - asset: assets/fonts/Poppins-SemiBold.ttf
+    - family: RoundedFont
+      fonts:
+        - asset: assets/fonts/MPLUSRounded1c-Regular.ttf
+        - asset: assets/fonts/MPLUSRounded1c-Medium.ttf
+        - asset: assets/fonts/MPLUSRounded1c-Bold.ttf    
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

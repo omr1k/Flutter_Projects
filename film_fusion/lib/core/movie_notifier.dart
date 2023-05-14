@@ -7,22 +7,29 @@ class MovieNotifier extends ChangeNotifier {
   List<Movie> trendingNowMovies = [];
   List<Movie> dicoverMovies = [];
   List<Movie> faveMovies = [];
+  List<Movie> seeMoreMovies = [];
 
   void getAllMovies() async {
-    print("NNNNNNNNNNNNN");
-    print(movies.length);
     if (movies.length == 0) {
       List<Movie> fetchedMovies = await NetworkManager.fetchMovies();
       movies = List.from(fetchedMovies)..shuffle();
       trendingNowMovies = List.from(fetchedMovies)..reversed;
       dicoverMovies = List.from(fetchedMovies)..shuffle();
+      seeMoreMovies = List.from(fetchedMovies)..shuffle();
       notifyListeners();
     }
   }
 
+  void updateAllMovies() async {
+    List<Movie> fetchedMovies = await NetworkManager.fetchMovies();
+    movies = List.from(fetchedMovies)..shuffle();
+    trendingNowMovies = List.from(fetchedMovies)..reversed;
+    dicoverMovies = List.from(fetchedMovies)..shuffle();
+    seeMoreMovies = List.from(fetchedMovies)..shuffle();
+    notifyListeners();
+  }
+
   void addToFavList(Movie myMovie) {
-    print("=====befor=====");
-    print(faveMovies.length);
     if (faveMovies.contains(myMovie)) {
       faveMovies.remove(myMovie);
       movies[movies.indexOf(myMovie)].filpIsFave();
@@ -30,8 +37,7 @@ class MovieNotifier extends ChangeNotifier {
       faveMovies.add(myMovie);
       movies[movies.indexOf(myMovie)].filpIsFave();
     }
-    print("=====after=====");
-    print(faveMovies.length);
+
     notifyListeners();
   }
 }

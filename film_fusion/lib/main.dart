@@ -18,7 +18,7 @@ class AppWidget extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          fontFamily: 'PoppinsFont',
+          fontFamily: 'RoundedFont',
           // other theme properties
         ),
         initialRoute: '/',

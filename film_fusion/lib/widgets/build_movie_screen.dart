@@ -55,16 +55,17 @@ class BuildMovieScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-              top: MediaQuery.of(context).size.height * 0.05,
-              child: IconButton(
-                iconSize: 25,
-                icon: Icon(Icons.arrow_circle_left_outlined,
-                    color: AppColors.white),
-                onPressed: () {
-                  Navigator.pop(context);
-                  // add your desired functionality here
-                },
-              )),
+            top: MediaQuery.of(context).size.height * 0.05,
+            child: IconButton(
+              iconSize: 25,
+              icon: Icon(Icons.arrow_circle_left_outlined,
+                  color: AppColors.white),
+              onPressed: () {
+                Navigator.pop(context);
+                // add your desired functionality here
+              },
+            ),
+          ),
           Positioned(
             top: MediaQuery.of(context).size.height / 2.2,
             left: 0,
@@ -197,5 +198,3 @@ class BuildMovieScreen extends StatelessWidget {
     );
   }
 }
-
-

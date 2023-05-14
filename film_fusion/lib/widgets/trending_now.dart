@@ -1,12 +1,19 @@
-import 'package:film_fusion/widgets/build_movie_screen.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
+import 'package:film_fusion/widgets/build_movie_screen.dart';
+import 'package:film_fusion/widgets/build_seemore_screen.dart';
+
 import '../constants/app_colors.dart';
+import '../models/movie.dart';
 import 'build_trendingnow_element.dart';
 
 class trendingNowWidget extends StatelessWidget {
-  const trendingNowWidget({super.key, required this.data});
-  final dynamic data;
+  const trendingNowWidget({
+    Key? key,
+    required this.movies,
+  }) : super(key: key);
+  final List<Movie> movies;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -35,18 +42,28 @@ class trendingNowWidget extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              Text(
-                'See more',
-                style: TextStyle(
-                  color: AppColors.lightGreen,
-                  fontSize: 12,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black.withOpacity(0.5),
-                      offset: Offset(2.0, 2.0),
-                      blurRadius: 3.0,
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BuildSeeMoreScreen(),
                     ),
-                  ],
+                  );
+                },
+                child: Text(
+                  'See more',
+                  style: TextStyle(
+                    color: AppColors.lightGreen,
+                    fontSize: 12,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black.withOpacity(0.5),
+                        offset: Offset(2.0, 2.0),
+                        blurRadius: 3.0,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -57,7 +74,7 @@ class trendingNowWidget extends StatelessWidget {
           child: Container(
             height: 230,
             child: ListView.builder(
-              itemCount: data.trendingNowMovies.length,
+              itemCount: movies.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
@@ -65,13 +82,13 @@ class trendingNowWidget extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              BuildMovieScreen(movie: data.trendingNowMovies[index]),
+                          builder: (context) => BuildMovieScreen(
+                              movie: movies[index]),
                         ),
                       );
                     },
-                    child:
-                        BuildTrendingnowElement(movie: data.trendingNowMovies[index]));
+                    child: BuildTrendingnowElement(
+                        movie: movies[index]));
               },
             ),
           ),

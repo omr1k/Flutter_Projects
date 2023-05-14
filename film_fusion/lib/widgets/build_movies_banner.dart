@@ -2,6 +2,7 @@
 import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:film_fusion/widgets/refresh_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -192,6 +193,14 @@ class _BuildMoviesBannerState extends State<BuildMoviesBanner> {
                 },
               ),
             ),
+            Positioned(
+                top: MediaQuery.of(context).size.height * 0.04,
+                child: RefreshButton(
+                  onPressed: () {
+                    Provider.of<MovieNotifier>(context, listen: false)
+                        .updateAllMovies();
+                  },
+                )),
             Positioned(
               bottom: 25,
               left: 0,

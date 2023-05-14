@@ -2,6 +2,7 @@ import 'package:film_fusion/models/movie.dart';
 import 'package:flutter/material.dart';
 import 'build_discover_gridview_element.dart';
 import '../constants/app_colors.dart';
+import 'build_seemore_screen.dart';
 
 class discoverGridView extends StatelessWidget {
   const discoverGridView({
@@ -38,7 +39,16 @@ class discoverGridView extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                Text(
+                TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BuildSeeMoreScreen(),
+                    ),
+                  );
+                },
+                child: Text(
                   'See more',
                   style: TextStyle(
                     color: AppColors.lightGreen,
@@ -52,6 +62,7 @@ class discoverGridView extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
               ],
             ),
           ),
